@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#000000">
+
+    <TableLayout
+        android:id="@+id/tablelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_above="@id/buttonPlay"
+        android:layout_marginBottom="50dp">
+        <TableRow>
+            <Button
+                android:id="@+id/firstSong"
+                android:text="@string/firstSong"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/circlebutton"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="onClickSong"/>
+            <Button
+                android:id="@+id/secondSong"
+                android:text="@string/secondSong"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/circlebutton"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="onClickSong"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/titleFirstSong"
+                android:text="@string/titleSong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:id="@+id/titleSecondSong"
+                android:text="@string/titleSong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="#ffffff"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageButton
+        android:id="@+id/buttonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circlebutton"
+        android:src="@drawable/buttonplay"
+        android:onClick="onClickPlay"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:max="8"
+        android:progress="4"
+        android:layout_below="@id/buttonPlay"
+        />
+
+    <TextView
+        android:id="@+id/textSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6 s"
+        android:layout_below="@id/seekBar"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
